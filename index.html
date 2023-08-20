@@ -18,19 +18,38 @@
           />
         </a>
       </h1>
-      <div class="header__hamburger">
+      <div
+        class="header__hamburger"
+        id="hamburger"
+        onclick="onClickHamburger()"
+      >
         <span class="header__hamburgerLine"></span>
         <span class="header__hamburgerLine"></span>
         <span class="header__hamburgerLine"></span>
       </div>
-      <nav>
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
+      <!-- ハンバーガーメニュー -->
+      <nav class="hamburgerNav" id="hamburgerNav">
+        <a href="#" class="hamburgerNav__logoLink">
+          <img
+            class="hamburgerNav__logo"
+            src="public/image/logo-w.svg"
+            alt="BBB英会話スクール"
+            width="100"
+          />
+        </a>
+        <div class="hamburgerNav__linkWrap">
+          <ul class="hamburgerNav__lists">
+            <li>
+              <a href="#" class="hamburgerNav__link">BBBが選ばれる理由</a>
+            </li>
+            <li><a href="#" class="hamburgerNav__link">受講生の声</a></li>
+            <li><a href="#" class="hamburgerNav__link">スクールの概要</a></li>
+          </ul>
+          <a class="hamburgerNav__entryLink" href="#">無料体験に申し込む</a>
+        </div>
       </nav>
     </header>
+
     <main>
       <div
         class="mainVisual"
@@ -38,6 +57,23 @@
       ></div>
     </main>
 
-    <script></script>
+    <script>
+      function onClickHamburger() {
+        const hamburgerNav = document.getElementById("hamburgerNav");
+        const hamburger = document.getElementById("hamburger");
+        console.log(hamburgerNav.classList.contains("hamburgerNav--active"));
+        if (hamburgerNav.classList.contains("hamburgerNav--active")) {
+          hamburgerNav.classList.remove("hamburgerNav--active");
+        } else {
+          hamburgerNav.classList.add("hamburgerNav--active");
+        }
+
+        if (hamburger.classList.contains("header__hamburger--close")) {
+          hamburger.classList.remove("header__hamburger--close");
+        } else {
+          hamburger.classList.add("header__hamburger--close");
+        }
+      }
+    </script>
   </body>
 </html>
