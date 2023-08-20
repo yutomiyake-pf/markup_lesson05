@@ -1,6 +1,5 @@
 body {
-  font-family: Arial, "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo,
-    sans-serif;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
 }
 
 ul {
@@ -13,6 +12,7 @@ a {
 }
 
 img {
-  object-fit: cover;
+  // object-fit: cover;
   max-width: 100%;
+  border-style: none;
 }
